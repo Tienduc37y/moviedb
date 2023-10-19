@@ -1,11 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-
+import {fetchDataFromApi} from './utils/api'
 function App() {
-  const [count, setCount] = useState(0)
+  const APITesting = () =>{
+    fetchDataFromApi('/movie/popular')
+    .then((res)=>{
+        console.log(res)
+    })
+  }
+  useEffect(APITesting(),[])
   return (
     <>
-      
+      App
     </>
   )
 }
