@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect,useState } from 'react'
 import './App.css'
 import {fetchDataFromApi} from './utils/api'
 function App() {
@@ -8,7 +8,9 @@ function App() {
         console.log(res)
     })
   }
-  useEffect(APITesting(),[])
+  useEffect(()=>{
+    APITesting()
+  },[])
   return (
     <>
       App
