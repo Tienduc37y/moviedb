@@ -19,7 +19,7 @@ function App() {
   // console.log(url)
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((res) => {
-      console.log(res);
+      // console.log(res);
 
       const url = {
         backdrop: res.images.secure_base_url + "original",
